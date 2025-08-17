@@ -946,8 +946,9 @@ header .follow a:hover{
 :root { --sidebar-w: 28rem; }
 
 /* Desktop / large screens */
+
 #vanta-bg {
-  position: fixed;           /* stays behind content while scrolling */
+  position: absolute;           /* stays behind content while scrolling */
   top: 0;
   left: var(--sidebar-w);    /* match your sidebar */
   width: calc(100vw - var(--sidebar-w));
