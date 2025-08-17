@@ -942,14 +942,35 @@ header .follow a:hover{
 }
 
 
+/* Set a single source of truth for sidebar width */
+:root { --sidebar-w: 28rem; }
+
+/* Desktop / large screens */
 #vanta-bg {
-  position: absolute;
+  position: fixed;           /* stays behind content while scrolling */
   top: 0;
-  left: 28rem; /* width of your header sidebar */
-  width: calc(100% - 28rem);
-  height: 100%;
+  left: var(--sidebar-w);    /* match your sidebar */
+  width: calc(100vw - var(--sidebar-w));
+  height: 100vh;             /* fill the viewport */
   z-index: -1;
+  pointer-events: none;      /* clicks pass through */
 }
+
+/* Tablet & below: sidebar collapses -> Vanta covers entire screen */
+@media (max-width: 1024px) {
+  :root { --sidebar-w: 0rem; }
+  #vanta-bg {
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+/* iOS Safari safe-area (optional, prevents cutoffs around notches) */
+@supports (height: 100svh) {
+  #vanta-bg { height: 100svh; }
+}
+
 
 
 .footer { width: 100%; }
