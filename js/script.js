@@ -109,12 +109,13 @@ const projectsData = [
     overview: "A Gradio-based resume analysis app leveraging Google Gemini API to generate ATS match %, summaries, and skill insights.",
     details: `
       <ul>
-        <li>Developed a resume parsing pipeline using PyPDF2 and integrated Google Gemini API with a Gradio-based UI for ATS match scoring, keyword gap analysis, and skill improvement suggestions.</li>
-        <li>Designed modular prompt workflows to generate structured outputs including profile summaries, improvement tips, and JSON insights for downstream use.</li>
-        <li>Deployed the application on Hugging Face Spaces for public accessibility, enabling real-time interactive resume–job description analysis.</li>
-        <li>Implemented robust error handling covering API key management, file parsing issues, and invalid user inputs to ensure seamless user experience.</li>
-      </ul>
-    `
+        <li>Developed an AI-powered ATS (Applicant Tracking System) Resume Analyzer leveraging Google’s Gemini-1.5-Flash model to evaluate resumes against job descriptions.</li>
+        <li>Integrated the Google Generative AI API through secure environment variables (.env) for content generation, analysis, and structured JSON outputs.</li>
+        <li>Implemented resume text extraction using PyPDF2, dynamic prompt engineering, and an interactive Gradio UI to deliver real-time insights including: Job Description Match Percentage, Missing Keywords, Technical & Soft Skill Improvement Suggestions, Resume Summary.</li>
+        <li>Built modular backend functions (<code>get_gemini_response</code>, <code>extract_pdf_text</code>, <code>generate_prompt</code>) to streamline model interaction and enhance scalability.</li>
+        <li>Deployed the application on Hugging Face Spaces for public accessibility, enabling real-time, interactive resume–job description analysis.</li>
+        <li>Implemented robust error handling covering API key validation, file parsing, and invalid user inputs to ensure reliability and a seamless user experience.</li>
+    </ul>`
   },
   {
     title: "ScoreCast - Academic Score Forecasting",
