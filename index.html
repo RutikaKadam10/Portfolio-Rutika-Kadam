@@ -329,71 +329,83 @@
 <!-- service section ends  -->
 
 <!-- experience section starts  -->
+<section class="experience theme-wrapped" id="experience">
+  <div class="center">
+    <h1 class="heading"><span> my </span> experience</h1>
 
-<section class="experience" id="experience">
+    <!-- Unified surface that wraps the cards + the big description panel -->
+    <div class="xp-surface">
 
-    <div class="center">
-
-        <h1 class="heading"> <span> my </span> experience </h1>
-
-    <div class="box-container">
-
+      <!-- Cards row -->
+      <div class="box-container">
+        <!-- Card 1 -->
         <div class="box">
-            <div class="content">
-                <span> Graduate Research Assistant @ Stony Brook Medicine </span>
-                <h6>July 2025 - Present, Stony Brook, USA</h6>
-                <div class="description">
-					<ul>
-					<li>Built reproducible missing data imputation pipelines in R & SAS for a prospective cohort of 10,000+ women (aged 65+) in the Study of Osteoporotic Fractures; performed exploratory analysis of missingness patterns to assess MCAR, MAR, and MNAR mechanisms.</li>
-          <li>Implemented Multiple Imputation by Chained Equations (MICE) along with alternative imputation strategies (mean, hot-deck, regression) to ensure robustness; evaluated convergence diagnostics, sensitivity analyses, and cross-method consistency.</li>
-          <li>Developed & validated machine learning models (logistic regression, other bagging and boosting algorithms) to predict physical function decline & fracture risk; applied cross-validation and hyperparameter tuning across multiple imputed datasets for reproducibility.</li>
-          </ul>
-					<!-- Additional responsibilities can be added similarly -->
-				</div>
+          <div class="content">
+            <button class="xp-trigger" type="button" aria-expanded="true">
+              <span class="xp-date">July 2025 – Present</span>
+              <span class="xp-role">Graduate Research Assistant</span>
+              <span class="xp-company">Stony Brook Medicine · Stony Brook, USA</span>
+            </button>
+            <div class="description">
+              <ul>
+                <li>Built reproducible missing data imputation pipelines in R & SAS for a prospective cohort of 10,000+ women (aged 65+) in the Study of Osteoporotic Fractures; performed exploratory analysis of missingness patterns to assess MCAR, MAR, and MNAR mechanisms.</li>
+                <li>Implemented Multiple Imputation by Chained Equations (MICE) along with alternative imputation strategies (mean, hot-deck, regression) to ensure robustness; evaluated convergence diagnostics, sensitivity analyses, and cross-method consistency.</li>
+                <li>Developed & validated machine learning models (logistic regression, other bagging and boosting algorithms) to predict physical function decline & fracture risk; applied cross-validation and hyperparameter tuning across multiple imputed datasets for reproducibility.</li>
+              </ul>
             </div>
+          </div>
         </div>
 
+        <!-- Card 2 -->
         <div class="box">
-            <div class="content">
-                <span> Systems Analyst @ Tata Consultancy Services </span>
-                <h6>August 2020 - April 2024, Pune, india</h6>
-                <div class="description">
-					<ul>
-					<li>Collaborated with the Vulnerability Management team to perform Risk Analysis on vulnerability datasets from Qualys VMDR across 55K+ Windows assets & 1M+ vulnerabilities, uncovering trends, anomalies, & threat vectors using Python & MySQL.</li>
-          <li>Implemented predictive models for vulnerability prioritization & patch management timelines, leveraging engineered features like CVSS-weighted risk scores & patch urgency indices, leading to a 15% reduction in security risks.</li>
-          <li>Developed supervised ML models (logistic regression, boosting algorithms, ANN) to predict the likelihood of exploitability using CVE metadata, asset attributes, & historical remediation data, improving prioritization efficiency by 25%.</li>
-          <li>Employed Data Analysis Expressions (DAX)-enhanced KPIs like CVSS score, threat intelligence, exploitability, risk levels, remediation timelines, deployment status, compliance rates within Power BI driven Vulnerability Analysis Dashboard.</li>
-          <li>Designed & deployed feasible technical solutions using Microsoft Endpoint Configuration Manager to remediate Windows & application vulnerabilities with 99% compliance; optimized configurations & automated tasks using PowerShell, boosting productivity by 25%.</li>
-          <li>Provided dependable IT support, proactively responding client queries, via ITIL framework-based processes like Incident, Change, Service Request 
-						Management using ServiceNow, working in Service Operation phase. </li>
-					</ul>
-					<!-- Additional responsibilities can be added similarly -->
-				</div>
+          <div class="content">
+            <button class="xp-trigger" type="button" aria-expanded="false">
+              <span class="xp-date">August 2020 – April 2024</span>
+              <span class="xp-role">Systems Analyst</span>
+              <span class="xp-company">Tata Consultancy Services · Pune, India</span>
+            </button>
+            <div class="description">
+              <ul>
+                <li>Collaborated with the Vulnerability Management team to perform Risk Analysis on vulnerability datasets from Qualys VMDR across 55K+ Windows assets & 1M+ vulnerabilities, uncovering trends, anomalies, & threat vectors using Python & MySQL.</li>
+                <li>Implemented predictive models for vulnerability prioritization & patch management timelines, leveraging engineered features like CVSS-weighted risk scores & patch urgency indices, leading to a 15% reduction in security risks.</li>
+                <li>Developed supervised ML models (logistic regression, boosting algorithms, ANN) to predict the likelihood of exploitability using CVE metadata, asset attributes, & historical remediation data, improving prioritization efficiency by 25%.</li>
+                <li>Employed DAX-enhanced KPIs within a Power BI Vulnerability Analysis Dashboard (CVSS score, threat intel, exploitability, risk levels, remediation timelines, deployment status, compliance rates).</li>
+                <li>Designed & deployed remediation via Microsoft Endpoint Configuration Manager with 99% compliance; automated tasks using PowerShell, boosting productivity by 25%.</li>
+                <li>Provided IT support via ITIL processes (Incident/Change/Service Request) using ServiceNow.</li>
+              </ul>
             </div>
+          </div>
         </div>
 
-
+        <!-- Card 3 -->
         <div class="box">
-            <div class="content">
-                <span> Data Intern @ Zensar Technologies </span>
-                <h6>May 2019 - July 2019, Pune, India</h6>
-                <div class="description">
-					<ul>
-					<li>Built ETL pipelines using Azure Data Factory to process ~30GB of transactional & web traffic data stored in Azure Data Lake Gen2; leveraged this data to perform Funnel Analysis for India’s leading e-commerce food ordering platform, Swiggy, identifying key drop-off points & reducing cart abandonment by 11%.</li>
-          <li>Built interactive Power BI dashboards to visualize conversion rates, traffic sources & user journey patterns; collaborated with marketing to optimize campaigns, increasing high-intent traffic by 15%.</li>
-          <li>Tracked pipeline enhancements & analysis results in JIRA, ensuring reproducibility & alignment with business KPIs.</li>
-          </ul>
-					<!-- Additional responsibilities can be added similarly -->
-				</div>
+          <div class="content">
+            <button class="xp-trigger" type="button" aria-expanded="false">
+              <span class="xp-date">May 2019 – July 2019</span>
+              <span class="xp-role">Data Intern</span>
+              <span class="xp-company">Zensar Technologies · Pune, India</span>
+            </button>
+            <div class="description">
+              <ul>
+                <li>Built ETL pipelines using Azure Data Factory to process ~30GB of transactional & web traffic data in Azure Data Lake Gen2; performed Funnel Analysis for Swiggy, reducing cart abandonment by 11%.</li>
+                <li>Created Power BI dashboards for conversion rates, traffic sources & user journeys; collaborated with marketing to increase high-intent traffic by 15%.</li>
+                <li>Tracked pipeline enhancements & analysis results in JIRA, ensuring reproducibility & KPI alignment.</li>
+              </ul>
             </div>
+          </div>
         </div>
-    </div>
+      </div><!-- /.box-container -->
 
-    </div>
-
+      <!-- Big description panel, still inside the same surface -->
+      <div id="xp-active-panel" class="xp-active-panel" role="region" aria-live="polite"></div>
+    </div><!-- /.xp-surface -->
+  </div>
 </section>
-
 <!-- experience section ends -->
+
+
+
+
 
 <!-- achievements section starts  
 

@@ -236,5 +236,39 @@ VANTA.NET({
 
 
 
+document.addEventListener('DOMContentLoaded', function(){
+  const triggers = Array.from(document.querySelectorAll('.experience .xp-trigger'));
+  const panel = document.getElementById('xp-active-panel');
+  if (!triggers.length || !panel) return;
+
+  function render(btn){
+    // aria state
+    triggers.forEach(b => b.setAttribute('aria-expanded', 'false'));
+    btn.setAttribute('aria-expanded', 'true');
+
+    // read new fields
+    const date = btn.querySelector('.xp-date')?.textContent?.trim() || '';
+    const role = btn.querySelector('.xp-role')?.textContent?.trim() || '';
+    const comp = btn.querySelector('.xp-company')?.textContent?.trim() || '';
+
+    const src = btn.parentElement.querySelector('.description');
+
+    // heading: Role @ Company + sub: Date
+    const heading = [role, comp ? `@ ${comp}` : ''].filter(Boolean).join(' ');
+    panel.innerHTML = `
+      <h3>${heading}</h3>
+      <div class="xp-sub">${date}</div>
+      ${src ? src.innerHTML : ''}
+    `;
+
+    // helpful scroll on small screens
+    const top = panel.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  triggers.forEach(btn => btn.addEventListener('click', () => render(btn)));
+  render(triggers[0]); // initial
+});
+
 
  
