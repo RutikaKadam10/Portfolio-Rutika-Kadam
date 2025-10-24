@@ -93,6 +93,19 @@ const modalNext = document.querySelector('.modal-next');
 
 const projectsData = [
   {
+  title: "Cardiovascular Disease Prediction",
+  overview: "A dual-model deep learning application that predicts cardiovascular disease risk using both clinical tabular data (ANN) and medical heart-scan images (CNN), integrated into an interactive Streamlit interface and deployed on Hugging Face Spaces.",
+  details: `
+    <ul>
+      <li>Developed two complementary models — an Artificial Neural Network (ANN) for patient clinical data and a Convolutional Neural Network (CNN) for heart-scan image analysis.</li>
+      <li>Engineered robust preprocessing pipelines for normalization, feature scaling, and model training, achieving 81% accuracy and an AUC of 0.87 with strong recall (0.94) for high-risk detection.</li>
+      <li>Implemented an interactive Streamlit web interface allowing users to input patient details or upload medical images for real-time predictions with confidence visualization.</li>
+      <li>Deployed the complete application on Hugging Face Spaces using a Docker environment for scalable, reproducible, and accessible deployment.</li>
+      <li>Designed an intuitive, user-friendly interface featuring dynamic probability charts and integrated TensorFlow-based inference for both ANN and CNN models.</li>
+    </ul>
+  `
+  },
+  {
     title: "AskYourDocument",
     overview: "A Retrieval-Augmented Generation (RAG) application that enables intelligent Q&A over documents and web content using FAISS, SBERT, and Google Generative AI.",
     details: `
@@ -103,6 +116,39 @@ const projectsData = [
 
       </ul>
     `
+  },
+  {
+    title: "CensusIncome-Classifier",
+    overview: "Income classification using AIC and ensemble models.",
+    details: `<ul>
+  <li>Developed a supervised ML pipeline to classify income levels using the UCI Adult Census dataset.</li>
+  <li>Implemented AIC-based forward feature selection to identify optimal minimal feature set.</li>
+  <li>Trained and compared multiple classifiers: Logistic Regression, KNN, Decision Tree, Random Forest, XGBoost, AdaBoost, and Gradient Boosting.</li>
+  <li>Evaluated models using cross-validation, confusion matrix, sensitivity/specificity, AUC-ROC curves, and accuracy score.</li>
+  <li>Concluded Random Forest as the best-performing model with 92.75% test accuracy and highest AUC score.</li>
+</ul>`
+  },
+  {
+    title: "AirlineDB Insights",
+    overview: "Advanced SQL query analysis on airline data.",
+    details: `<ul>
+  <li>Analyzed airline database to extract KPIs like on-time performance, revenue per flight, and occupancy rate.</li>
+  <li>Wrote complex SQL queries using joins to integrate data from multiple tables for unified reporting.</li>
+  <li>Used SQL window functions to calculate running totals and rank flight routes by demand and occupancy (95% accuracy).</li>
+  <li>Applied CASE statements to enable dynamic flight categorization based on delay status, ticket class, and demographics.</li>
+  <li>Built operational dashboards to visualize insights and support data-driven airline strategy.</li>
+</ul>`
+  },
+  {
+    title: "ConversionFlow Analyzer",
+    overview: "Funnel analysis dashboard with Power BI.",
+    details: `<ul>
+  <li>Built an interactive Power BI dashboard to analyze Swiggy’s e-commerce funnel performance.</li>
+  <li>Cleaned and transformed raw data, handled missing values, and created calculated fields using DAX.</li>
+  <li>Conducted funnel analysis focusing on traffic sources, session metrics, and conversion stages (L2M, M2C, C2P, P2O).</li>
+  <li>Tracked order volume fluctuations and conversion rate trends compared to historical benchmarks.</li>
+  <li>Designed dynamic dashboards with KPIs and filters to identify key performance shifts and data-driven insights.</li>
+</ul>`
   },
   {
     title: "SmartApply",
@@ -129,39 +175,6 @@ const projectsData = [
         <li>Improved accuracy and generalization through hyperparameter tuning.</li>
       </ul>
     `
-  },
-  {
-    title: "CensusIncome-Classifier",
-    overview: "Income classification using AIC and ensemble models.",
-    details: `<ul>
-  <li>Developed a supervised ML pipeline to classify income levels using the UCI Adult Census dataset.</li>
-  <li>Implemented AIC-based forward feature selection to identify optimal minimal feature set.</li>
-  <li>Trained and compared multiple classifiers: Logistic Regression, KNN, Decision Tree, Random Forest, XGBoost, AdaBoost, and Gradient Boosting.</li>
-  <li>Evaluated models using cross-validation, confusion matrix, sensitivity/specificity, AUC-ROC curves, and accuracy score.</li>
-  <li>Concluded Random Forest as the best-performing model with 92.75% test accuracy and highest AUC score.</li>
-</ul>`
-  },
-  {
-    title: "ConversionFlow Analyzer",
-    overview: "Funnel analysis dashboard with Power BI.",
-    details: `<ul>
-  <li>Built an interactive Power BI dashboard to analyze Swiggy’s e-commerce funnel performance.</li>
-  <li>Cleaned and transformed raw data, handled missing values, and created calculated fields using DAX.</li>
-  <li>Conducted funnel analysis focusing on traffic sources, session metrics, and conversion stages (L2M, M2C, C2P, P2O).</li>
-  <li>Tracked order volume fluctuations and conversion rate trends compared to historical benchmarks.</li>
-  <li>Designed dynamic dashboards with KPIs and filters to identify key performance shifts and data-driven insights.</li>
-</ul>`
-  },
-  {
-    title: "AirlineDB Insights",
-    overview: "Advanced SQL query analysis on airline data.",
-    details: `<ul>
-  <li>Analyzed airline database to extract KPIs like on-time performance, revenue per flight, and occupancy rate.</li>
-  <li>Wrote complex SQL queries using joins to integrate data from multiple tables for unified reporting.</li>
-  <li>Used SQL window functions to calculate running totals and rank flight routes by demand and occupancy (95% accuracy).</li>
-  <li>Applied CASE statements to enable dynamic flight categorization based on delay status, ticket class, and demographics.</li>
-  <li>Built operational dashboards to visualize insights and support data-driven airline strategy.</li>
-</ul>`
   }
 ];
 
