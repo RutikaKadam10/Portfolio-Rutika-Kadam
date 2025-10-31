@@ -1,7 +1,7 @@
 let menu = document.querySelector('#menu-bars');
 let header = document.querySelector('header');
 
-menu.onclick = () =>{
+/*menu.onclick = () =>{
     menu.classList.toggle('fa-times');
     header.classList.toggle('active');
 }
@@ -33,7 +33,7 @@ document.querySelectorAll('a').forEach(links =>{
         cursor2.classList.remove('active');
     }
 
-});
+});*/
 
 
 
@@ -118,6 +118,18 @@ const projectsData = [
     `
   },
   {
+  title: "Airbnb Price Prediction",
+  overview: "A machine learning project predicting Airbnb listing prices in Seattle through Exploratory Data Analysis, regression modeling, and sentiment analysis.",
+  details: `<ul>
+    <li>Conducted comprehensive EDA and data preprocessing, including handling missing values, encoding categorical variables, outlier treatment, and feature scaling.</li>
+    <li>Explored relationships between price, room type, location, and amenities, identifying strong correlations and influential features.</li>
+    <li>Implemented multiple regression algorithms — Linear Regression, Ridge, Lasso, Random Forest, XGBoost, and CatBoost — for price prediction.</li>
+    <li>Achieved best performance with <b>Random Forest Regression (R² ≈ 0.68, MSE ≈ 3597)</b>, validated through 10-fold cross-validation.</li>
+    <li>Applied feature importance and TreeInterpreter for model explainability, revealing that entire homes, higher bedroom counts, and premium amenities (gym, pool, elevator) significantly increase prices.</li>
+    <li>Created insightful visualizations using Seaborn and Matplotlib to interpret distribution patterns, correlations, and prediction performance.</li>
+  </ul>`
+  }
+  /*{
     title: "CensusIncome-Classifier",
     overview: "Income classification using AIC and ensemble models.",
     details: `<ul>
@@ -127,7 +139,7 @@ const projectsData = [
   <li>Evaluated models using cross-validation, confusion matrix, sensitivity/specificity, AUC-ROC curves, and accuracy score.</li>
   <li>Concluded Random Forest as the best-performing model with 92.75% test accuracy and highest AUC score.</li>
 </ul>`
-  },
+  }*/,
   {
     title: "AirlineDB Insights",
     overview: "Advanced SQL query analysis on airline data.",
@@ -162,7 +174,7 @@ const projectsData = [
         <li>Deployed the application on Hugging Face Spaces for public accessibility, enabling real-time, interactive resume–job description analysis.</li>
         <li>Implemented robust error handling covering API key validation, file parsing, and invalid user inputs to ensure reliability and a seamless user experience.</li>
     </ul>`
-  },
+  }/*,
   {
     title: "ScoreCast - Academic Score Forecasting",
     overview: "ML framework to forecast math scores.",
@@ -175,7 +187,7 @@ const projectsData = [
         <li>Improved accuracy and generalization through hyperparameter tuning.</li>
       </ul>
     `
-  }
+  }*/
 ];
 
 document.querySelectorAll('.project-card').forEach(card => {
@@ -223,15 +235,15 @@ VANTA.NET({
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
-  minHeight: 200.00,
+  minHeight: 300.00,
   minWidth: 300.00,
   scale: 1.0,
   scaleMobile: 1.0,
   color: 0x2f5c6c,       // dark teal
   backgroundColor: 0xa6c8d6, // light teal
   points: 8.0,
-  maxDistance: 20.0,
-  spacing: 18.0
+  maxDistance: 25.0,
+  spacing: 25.0
 })
 
 
@@ -271,4 +283,5 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
- 
+
+

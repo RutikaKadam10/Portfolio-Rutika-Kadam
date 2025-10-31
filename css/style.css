@@ -258,6 +258,18 @@ header .follow a:hover{
     line-height: 1.8;
 }
 
+.about ul {
+  font-size: 1.7rem;
+  color: #2e343f;
+  line-height: 1.8;
+  padding-left: 2rem; /* slight indent for bullets */
+  list-style-type: disc;
+}
+.about ul li {
+  margin-bottom: 1rem; /* spacing between list items */
+}
+
+
 .about .row-1 .content .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -1431,3 +1443,156 @@ header .follow a:hover{
   .experience .box-container{ grid-template-columns: 1fr; }
   .experience .xp-trigger:hover{ transform:none; }
 }
+
+
+
+
+
+
+
+
+/* ========= ONE-PANEL-PER-SECTION RESET ========= */
+/* undo the earlier full .about panel so we can split cleanly */
+.about .center{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 0 !important;
+}
+
+/* ---- reusable glass card ---- */
+:root{
+  --panel-bg1: rgba(255,255,255,0.22);
+  --panel-bg2: rgba(255,255,255,0.12);
+  --panel-border: rgba(255,255,255,0.40);
+  --panel-radius: 18px;
+  --panel-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+.panel {
+  background: linear-gradient(180deg, var(--panel-bg1), var(--panel-bg2));
+  border: 1px solid var(--panel-border);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--panel-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem 1.8rem;
+  margin: 1.2rem 0;
+}
+
+/* ========= APPLY AS SINGLE PANELS ========= */
+/* ABOUT ME (just the intro text block) */
+.about .row-1 .content { padding: 0; }
+.about .row-1 .content > p:first-of-type,
+.about .row-1 .content > p:first-of-type ~ p {
+  /* group both intro paragraphs into one panel look */
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.about .row-1 .content .about-panel {
+  /* helper wrapper if you add it (see HTML note below) */
+}
+
+/* If you DON'T touch HTML: wrap the whole content area in one panel */
+.about .row-1 { padding: 0 0 1.2rem 0; }
+.about .row-1 > .content {
+  background: linear-gradient(180deg, var(--panel-bg1), var(--panel-bg2));
+  border: 1px solid var(--panel-border);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--panel-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem 1.8rem;
+  margin: 1.2rem 0;
+}
+
+/* EDUCATION (one panel just for the list) */
+.education-list{
+  background: linear-gradient(180deg, var(--panel-bg1), var(--panel-bg2)) !important;
+  border: 1px solid var(--panel-border) !important;
+  border-radius: var(--panel-radius) !important;
+  box-shadow: var(--panel-shadow) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  padding: 1.6rem !important;
+  margin: 1.2rem 0 !important;
+}
+
+/* SKILLS (one panel for the whole grid) */
+.about .row-2 .box-container{
+  background: linear-gradient(180deg, var(--panel-bg1), var(--panel-bg2)) !important;
+  border: 1px solid var(--panel-border) !important;
+  border-radius: var(--panel-radius) !important;
+  box-shadow: var(--panel-shadow) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  padding: 1.6rem !important;
+  margin-top: 1.2rem !important;
+}
+
+/* flatten individual skill tiles so it doesn't look layered */
+.about .row-2 .box-container .box{
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+/* PROJECTS (the slider itself is the single panel) */
+.project-slider{
+  background: linear-gradient(180deg, var(--panel-bg1), var(--panel-bg2)) !important;
+  border: 1px solid var(--panel-border) !important;
+  border-radius: var(--panel-radius) !important;
+  box-shadow: var(--panel-shadow) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  padding: 2rem 1.8rem !important;
+}
+
+/* CONTACT (one panel around the contact cards) */
+.contact .center{
+  background: linear-gradient(180deg, var(--panel-bg1), var(--panel-bg2)) !important;
+  border: 1px solid var(--panel-border) !important;
+  border-radius: var(--panel-radius) !important;
+  box-shadow: var(--panel-shadow) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  padding: 2rem 1.8rem !important;
+}
+
+/* tidy spacing so panels don't stack too tight */
+.about .center .heading,
+#projectss.heading,
+.contact .center .heading {
+  margin-top: .6rem;
+  margin-bottom: .6rem;
+}
+
+
+
+
+/* Make the track a true carousel rail */
+.slider-container{
+  display: flex;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+  /* let it grow wider than the viewport; no extra width cap */
+}
+
+/* Force each slide to be exactly one “page” wide */
+.slide{
+  flex: 0 0 100%;      /* <- key: no shrink, exactly 100% width */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 0.5rem;   /* avoids edge clipping of shadows */
+  box-sizing: border-box;
+}
+
+/* Avoid extra width from card side-margins; rely on gap */
+.project-card{
+  margin: 0;           /* was: 0 1rem; remove to prevent overflow creep */
+}
+
+
