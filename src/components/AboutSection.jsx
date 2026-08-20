@@ -1,6 +1,8 @@
 import { CircleDot, GraduationCap } from "lucide-react";
 
 export const AboutSection = () => {
+  const profileImageUrl = `${import.meta.env.BASE_URL}projects/profile.jpeg`;
+
   return (
     <section id="about" className="py-24 px-4 relative">
       {" "}
@@ -60,7 +62,7 @@ export const AboutSection = () => {
               <div className="space-y-4">
                 <div className="w-full px-1">
                   <img
-                    src="/projects/profile.jpeg"
+                    src={profileImageUrl}
                     alt="Rutika Kadam"
                     className="h-[275px] w-full object-cover rounded-sm"
                   />

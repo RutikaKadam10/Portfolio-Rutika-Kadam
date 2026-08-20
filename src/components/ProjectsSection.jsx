@@ -1,13 +1,15 @@
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Github, X } from "lucide-react";
 
+const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 const projects = [
   {
     id: 1,
     title: "Make Your Trip",
     description:
       "A multi-agent AI travel planner that generates end-to-end itineraries using live hotel, weather, and flight tool integrations, then pauses for human review before finalizing the trip.",
-    image: "/projects/Proj1.png",
+    image: asset("projects/Proj1.png"),
     tags: ["Agentic AI", "Multi Agent", "LangGraph", "MCP", "Human in the Loop"],
     githubUrl: "https://github.com/RutikaKadam10/make_your_trip",
     overview:
@@ -26,7 +28,7 @@ const projects = [
     title: "Cardiovascular Diseases Prediction",
     description:
       "A dual-model deep learning application that predicts cardiovascular disease risk using both clinical data (ANN) and medical heart-scan images (CNN), integrated into an interactive Streamlit interface.",
-    image: "/projects/Proj2.webp",
+    image: asset("projects/Proj2.webp"),
     tags: ["Deep Learning", "ANN", "CNN"],
     githubUrl: "https://github.com/RutikaKadam10/cardiovascular_diseases_prediction.git",
     overview:
@@ -44,7 +46,7 @@ const projects = [
     title: "AskYourDocument",
     description:
       "A Retrieval-Augmented Generation (RAG) application that enables intelligent Q&A over documents and web content using FAISS, SBERT, and Google Generative AI.",
-    image: "/projects/Proj3.png",
+    image: asset("projects/Proj3.png"),
     tags: ["Generative AI", "RAG", "FAISS"],
     githubUrl: "https://github.com/RutikaKadam10/AskYourDoc",
     overview:
@@ -60,7 +62,7 @@ const projects = [
     title: "Airbnb Price Prediction",
     description:
       "A machine learning project predicting Airbnb listing prices in Seattle through Exploratory Data Analysis, regression modeling, and sentiment analysis.",
-    image: "/projects/proj4.jpg",
+    image: asset("projects/proj4.jpg"),
     tags: ["Machine Learning", "EDA", "Regression"],
     githubUrl: "https://github.com/RutikaKadam10/seattle_airbnb_insights-text-sentiment-and-price-prediction",
     overview:
@@ -79,7 +81,7 @@ const projects = [
     title: "AirlineDB Insights",
     description:
       "Executed SQL-based analysis on airline data to derive KPIs like on-time rates and occupancy. Leveraged joins, window functions, and CASE logic for dynamic, 95%-accurate reporting.",
-    image: "/projects/proj5.jpg",
+    image: asset("projects/proj5.jpg"),
     tags: ["SQL Analytics", "KPIs", "Reporting"],
     githubUrl: "https://github.com/RutikaKadam10/SQL-Proficiency/tree/main/AirlineDB",
     overview: "Advanced SQL query analysis on airline data.",
@@ -96,7 +98,7 @@ const projects = [
     title: "ConversionFlow Analyzer",
     description:
       "An interactive Power BI dashboard for analyzing Swiggy's user conversion funnel and channel trends.",
-    image: "/projects/Proj6.png",
+    image: asset("projects/Proj6.png"),
     tags: ["Power BI", "Funnel Analysis", "DAX"],
     githubUrl: "https://github.com/RutikaKadam10/PowerBi-Tableau/tree/main/SWIGGY%20E-commerce%20Food%20Ordering%20Website-Funnel%20Analysis",
     overview: "Funnel analysis dashboard with Power BI.",

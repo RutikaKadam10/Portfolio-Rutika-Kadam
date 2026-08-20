@@ -1,6 +1,8 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 export const HeroSection = () => {
+  const resumeUrl = `${import.meta.env.BASE_URL}Rutika_Kadam_ResumeDS.pdf`;
+
   return (
     <section
       id="hero"
@@ -32,7 +34,7 @@ export const HeroSection = () => {
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a
-              href="/Rutika_Kadam_ResumeDS.pdf"
+              href={resumeUrl}
               target="_blank"
               rel="noreferrer"
               className="button-label inline-block w-full sm:w-auto px-6 py-2 rounded-sm border border-primary text-primary text-center hover:bg-primary/10 transition-colors duration-300"
