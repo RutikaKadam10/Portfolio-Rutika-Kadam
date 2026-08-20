@@ -4,12 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: "/Portfolio-Rutika-Kadam/",
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/Portfolio-Rutika-Kadam/" : "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+}));
