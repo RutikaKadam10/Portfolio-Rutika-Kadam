@@ -67,24 +67,24 @@
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
 
-    --card: 0 0% 100% / 0.82;
+    --card: 0 0% 100% / 0.84;
 
-    --primary: 250 47% 60%;
+    --primary: 262 92% 68%;
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
   }
 
   .dark {
-    --background: 222 47% 4%;
+    --background: 240 35% 5%;
     --foreground: 213 31% 91%;
 
-    --card: 222 47% 8% / 0.58;
+    --card: 238 32% 10% / 0.6;
 
-    --primary: 250 65% 65%;
+    --primary: 268 100% 72%;
     --primary-foreground: 213 31% 91%;
 
-    --border: 217 33% 24% / 0.7;
+    --border: 264 70% 36% / 0.55;
   }
 
   * {
@@ -126,7 +126,9 @@
 
 @utility text-glow {
   @apply relative;
-  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+  text-shadow:
+    0 0 10px rgba(167, 139, 250, 0.48),
+    0 0 24px rgba(139, 92, 246, 0.22);
 }
 
 @utility heading-display {
@@ -154,7 +156,17 @@
 }
 
 @utility card-hover {
-  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+  @apply transition-transform duration-300 hover:scale-[1.02];
+  box-shadow:
+    0 0 0 1px rgba(139, 92, 246, 0.08),
+    0 18px 48px rgba(5, 8, 20, 0.34);
+}
+
+.card-hover:hover {
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.24),
+    0 0 24px rgba(139, 92, 246, 0.16),
+    0 22px 56px rgba(5, 8, 20, 0.45);
 }
 
 @utility gradient-border {
@@ -165,18 +177,24 @@
     hsl(var(--background) / 0.45)
   );
   background-clip: padding-box;
-  border: 1px solid transparent;
+  border: 1px solid rgba(167, 139, 250, 0.16);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 0 24px rgba(139, 92, 246, 0.08);
 }
 
 @utility cosmic-button {
   @apply px-6 py-2 rounded-sm bg-primary/85 text-primary-foreground font-medium backdrop-blur-md
-         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+         transition-all duration-300 hover:shadow-[0_0_16px_rgba(139,92,246,0.72)]
          hover:scale-105 active:scale-95;
   font-family: "Space Mono", monospace;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  box-shadow:
+    0 0 0 1px rgba(196, 181, 253, 0.18),
+    0 0 18px rgba(139, 92, 246, 0.2);
 }
 
 @utility star {
@@ -194,4 +212,11 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+.dark body {
+  background-image:
+    radial-gradient(circle at 18% 18%, rgba(139, 92, 246, 0.12), transparent 24%),
+    radial-gradient(circle at 82% 12%, rgba(168, 85, 247, 0.08), transparent 20%),
+    radial-gradient(circle at 50% 48%, rgba(91, 33, 182, 0.05), transparent 26%);
 }
