@@ -9,8 +9,11 @@ const experiences = [
     role: "Data Scientist (Graduate Researcher)",
     duration: "July 2025 - Present",
     points: [
-      "Built missing-data imputation pipelines using multiple imputation and trained supervised machine learning models on imputed datasets to predict physical function decline and fracture risk in the Study of Osteoporotic Fractures cohort.",
-      "Accelerated interpretation of statistical results by developing a Retrieval-Augmented Generation (RAG) pipeline using OpenAI GPT-4 and embedding models with LlamaIndex to translate SAS/R mixed-effects outputs into research narratives.",
+      "Built an end-to-end Multi-Modal RAG pipeline over 6k+ pages of medical documents for Department of Public Health, Stony Brook Medicine, using Azure Document Intelligence for layout-aware extraction & GPT-4o for figure captioning.",
+      "Implemented custom semantic chunking using embedding-based sentence similarity & adaptive breakpoint detection.",
+      "Designed & benchmarked FLAT, HNSW, & IVF_FLAT indexes in Milvus across 27k+ multi-modal chunks, comparing p50/p95 latency & Recall@5; achieved comparable accuracy with approximate indexes at ∼2.5× lower latency than FLAT.",
+      "Evaluated vector search, MMR reranking, & hybrid Vector+BM25 retrieval with RRF on a synthetic ground-truth dataset spanning text, tables, & images; achieved 0.90 Recall@5 with hybrid retrieval.",
+      "Built a grounded RAG generation pipeline with structured JSON outputs & source citations, achieving RAGAS scores of 0.82 faithfulness, 0.82 answer relevancy, 0.93 context precision, & 0.74 context recall.",
     ],
   },
   {
