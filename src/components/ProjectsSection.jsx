@@ -6,6 +6,25 @@ const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 const projects = [
   {
     id: 1,
+    title: "EV Battery Capacity Prediction",
+    description:
+      "A deep learning study and deployment that estimates lithium-ion battery capacity from 21-minute charging windows, with the full pipeline versioned, tracked, containerised and deployed on Azure.",
+    image: asset("projects/Proj7.png"),
+    tags: ["PyTorch", "MLOps", "Docker", "CI/CD", "Azure", "Data Version Control"],
+    githubUrl: "https://github.com/RutikaKadam10/ev-battery-capacity-prediction",
+    overview:
+      "EV Battery Capacity Prediction is a deep learning study and deployment built with PyTorch, DVC, MLflow, FastAPI, Docker and Azure. It estimates lithium-ion battery capacity from 21-minute charging windows, addressing the fact that direct measurement requires controlled charging conditions that occur in only 56% of real sessions. The full pipeline is versioned, tracked, containerised and deployed on a public HTTPS endpoint.",
+    details: [
+      "Benchmarked LSTM and Transformer models against statistical baselines on 111K charging snippets from 30 vehicles, using 5-fold cross-validation split by vehicle to prevent leakage between overlapping windows.",
+      "Found a linear model on odometer reading alone (RMSE 1.10) outperformed both sequence models (RMSE 1.69 and 1.71) across 10 tracked ablations.",
+      "Traced the cause with a positional-encoding removal test: the Transformer performed identically without it, showing the 21-minute observation window, not model capacity, sets the ceiling.",
+      "Set a 0.09 RMSE significance threshold from cross-validation variance before evaluation, correctly predicting the gap between architectures would be indistinguishable from noise.",
+      "Versioned data and models with DVC across two cloud remotes and tracked every run in MLflow with its Git commit and data hash, making results reproducible.",
+      "Deployed a FastAPI service via Docker and Azure Container Registry to Azure Container Apps, with GitHub Actions CI running 43 tests on each push.",
+    ],
+  },
+  {
+    id: 2,
     title: "Make Your Trip",
     description:
       "A multi-agent AI travel planner that generates end-to-end itineraries using live hotel, weather, and flight tool integrations, then pauses for human review before finalizing the trip.",
@@ -24,7 +43,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Cardiovascular Diseases Prediction",
     description:
       "A dual-model deep learning application that predicts cardiovascular disease risk using both clinical data (ANN) and medical heart-scan images (CNN), integrated into an interactive Streamlit interface.",
@@ -39,22 +58,6 @@ const projects = [
       "Implemented an interactive Streamlit web interface allowing users to input patient details or upload medical images for real-time predictions with confidence visualization.",
       "Deployed the complete application on Hugging Face Spaces using a Docker environment for scalable, reproducible, and accessible deployment.",
       "Designed an intuitive, user-friendly interface featuring dynamic probability charts and integrated TensorFlow-based inference for both ANN and CNN models.",
-    ],
-  },
-  {
-    id: 3,
-    title: "AskYourDocument",
-    description:
-      "A Retrieval-Augmented Generation (RAG) application that enables intelligent Q&A over documents and web content using FAISS, SBERT, and Google Generative AI.",
-    image: asset("projects/Proj3.png"),
-    tags: ["Generative AI", "RAG", "FAISS"],
-    githubUrl: "https://github.com/RutikaKadam10/AskYourDoc",
-    overview:
-      "A Retrieval-Augmented Generation (RAG) application that enables intelligent Q&A over documents and web content using FAISS, SBERT, and Google Generative AI.",
-    details: [
-      "Developed an end-to-end Retrieval-Augmented Generation (RAG) application integrating FAISS-based semantic vector search with Sentence-BERT embeddings to deliver context-aware query responses from unstructured text sources.",
-      "Built a FastAPI backend for document ingestion, text chunking, embedding generation, and retrieval; exposed REST APIs for seamless integration with downstream applications.",
-      "Designed and implemented a Streamlit-based interactive frontend enabling users to upload documents (PDF, DOCX, TXT), perform semantic search, and receive LLM-powered contextual answers with improved retrieval accuracy.",
     ],
   },
   {
