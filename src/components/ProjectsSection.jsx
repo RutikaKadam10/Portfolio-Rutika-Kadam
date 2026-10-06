@@ -25,6 +25,31 @@ const projects = [
   },
   {
     id: 2,
+    title: "Multi-Modal RAG Research Pipeline (Demo)",
+    description:
+      "An end-to-end multi-modal RAG pipeline that extracts text, tables, and figures from technical PDFs, indexes them in Milvus, and generates cited answers evaluated with RAGAS.",
+    image: asset("projects/Proj8.png"),
+    tags: [
+      "Multi-Modal RAG",
+      "Milvus",
+      "Vector Search",
+      "Hybrid Retrieval (BM25 + RRF)",
+      "RAGAS",
+    ],
+    githubUrl: "https://github.com/RutikaKadam10/multi_modal_rag",
+    overview:
+      "An end-to-end multi-modal retrieval-augmented generation pipeline that extracts text, tables, and figures from technical PDFs, indexes them in a vector database, and generates cited answers evaluated with RAGAS. It is a demo of the approach I used as a Graduate Researcher (Data Scientist) at Stony Brook Medicine for medical documents. Due to privacy constraints, I cannot publish the medical documents I worked with. The sample PDFs here are public IPCC climate-science reports, chosen because they have a similar structure (narrative text, data tables, and figures).",
+    details: [
+      "Extracted layout-aware text, tables, and figure regions with Azure Document Intelligence, and generated figure descriptions with GPT-4o vision.",
+      "Implemented semantic chunking from sentence-level embedding similarity, with per-page chunking to keep page-accurate citations.",
+      "Built a Milvus vector index and benchmarked FLAT, HNSW, and IVF_FLAT for p50/p95 latency and Recall@5 on 1,300+ chunks.",
+      "Compared baseline vector search, MMR reranking, and hybrid vector + BM25 retrieval fused via Reciprocal Rank Fusion; hybrid achieved 0.90 Recall@5.",
+      "Generated grounded answers with structured JSON citations and evaluated them with RAGAS (faithfulness 0.82, context precision 0.93, context recall 0.74).",
+      "Tracked token usage, latency, and estimated cost per LLM call, and handled Azure rate limits by tuning deployment capacity.",
+    ],
+  },
+  {
+    id: 3,
     title: "Make Your Trip",
     description:
       "A multi-agent AI travel planner that generates end-to-end itineraries using live hotel, weather, and flight tool integrations, then pauses for human review before finalizing the trip.",
@@ -43,7 +68,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Cardiovascular Diseases Prediction",
     description:
       "A dual-model deep learning application that predicts cardiovascular disease risk using both clinical data (ANN) and medical heart-scan images (CNN), integrated into an interactive Streamlit interface.",
@@ -61,7 +86,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Airbnb Price Prediction",
     description:
       "A machine learning project predicting Airbnb listing prices in Seattle through Exploratory Data Analysis, regression modeling, and sentiment analysis.",
@@ -80,7 +105,7 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "AirlineDB Insights",
     description:
       "Executed SQL-based analysis on airline data to derive KPIs like on-time rates and occupancy. Leveraged joins, window functions, and CASE logic for dynamic, 95%-accurate reporting.",
@@ -97,7 +122,7 @@ const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "ConversionFlow Analyzer",
     description:
       "An interactive Power BI dashboard for analyzing Swiggy's user conversion funnel and channel trends.",
