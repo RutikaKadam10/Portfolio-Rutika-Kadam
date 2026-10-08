@@ -19,13 +19,14 @@ const experiences = [
   {
     company: "Tata Consultancy Services",
     location: "Pune, India",
-    role: "Data Analyst",
+    role: "Data Scientist",
     duration: "August 2020 - April 2024",
     points: [
       "Collaborating with the Vulnerability Management team, performed exploratory data analysis on 1M+ system vulnerability records reporting from Qualys VMDR using Python-pandas, uncovering trends, anomalies, and threat vectors, that informed remediation prioritization.",
       "Built linear and logistic regression models (scikit-learn) predicting CVSS severity and exploit availability on 150K findings, achieving 0.74 ROC-AUC and a 22% risk-exposure reduction via backtest vs. FIFO prioritization.",
       "Discovered recurring remediation patterns across 150K+ detection records by applying semantic clustering using E5 embeddings with HDBSCAN on remediation text data.",
       "Fine-tuned a DistilBERT classifier on cluster-derived labels to predict remediation categories, achieving 100% held-out accuracy, laying the groundwork for automated ticket routing.",
+      "Built a Power BI dashboard with DAX KPIs (CVSS, exploit exposure, MTTR, SLA compliance) that turned alert noise into clear actions for non-technical stakeholders, showing 64% fewer Jira tickets.",
       "Achieved 99% patch compliance across enterprise systems by deploying automated remediation workflows through Microsoft Endpoint Configuration Manager and automated tasks using PowerShell, boosting productivity by 25%.",
     ],
   },
