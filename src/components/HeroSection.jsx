@@ -1,7 +1,7 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 export const HeroSection = () => {
-  const resumeUrl = `${import.meta.env.BASE_URL}Rutika_Kadam_ResumeDS.pdf`;
+  const resumeUrl = `${import.meta.env.BASE_URL}projects/Rutika_Kadam_ResumeDS.pdf`;
 
   return (
     <section
