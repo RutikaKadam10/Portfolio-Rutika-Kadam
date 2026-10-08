@@ -19,7 +19,7 @@ const experiences = [
   {
     company: "Tata Consultancy Services",
     location: "Pune, India",
-    role: "System Analyst",
+    role: "Data Analyst",
     duration: "August 2020 - April 2024",
     points: [
       "Collaborating with the Vulnerability Management team, performed exploratory data analysis on 1M+ system vulnerability records reporting from Qualys VMDR using Python-pandas, uncovering trends, anomalies, and threat vectors, that informed remediation prioritization.",
