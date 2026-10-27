@@ -62,7 +62,7 @@ export const HeroSection = () => {
                 <Github className="h-6 w-6" />
               </a>
               <a
-                href="mailto:rutikakadam2727@gmail.com"
+                href="mailto:rkadam1827@gmail.com"
                 aria-label="Send email"
                 className="text-foreground/75 transition-colors duration-300 hover:text-primary"
               >
